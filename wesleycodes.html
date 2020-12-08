@@ -2,37 +2,164 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!--link to css-->
-<link rel="stylesheet" href="../css/wesleycodes.css">
-<link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="../css/wesleycodes.css"/>
+<link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.css"/>
+<script src="https://kit.fontawesome.com/aeb3f8f748.js" crossorigin="anonymous"></script>
 
 <!--link to jquery-->
 <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
 </head>
 <body>
-    <!--background video-->
-    <div>
-      <video autoplay muted loop id="rippleVideo">
-         <source src="../videos/Erica_Anderson_February_2020_VJ_Pack/ripples_vj.mp4" type="video/mp4">
+
+
+  <!--TopBar-->
+  <section>
+    <div class="topbar">
+      <h1 id="name">Wesley Morgan</h1>
+      <i class="fas fa-code"></i>
+      <h2 id="profession">Front-End Developer</h2>
+      <i class="fas fa-code" id="secondicon"></i>
+    </div>
+  </section>
+  <div id="backgroundwhite">
+    <div class="background">
+      <video autoplay loop id="myVideo">
+          <source src="../gifs/front_face.gif" type="video/mp4">
       </video>
     </div>
+</div>
 
-    <div>
-      <input type="image" src="../images/wesleycodes_title_white.png" id="img1" class="img-fluid"/>
-      <input type="image" src="../images/wesleycodes_title_projects.png" id="img2" class="img-fluid"/>
+  <!--BottomBar-->
+  <section>
+    <div class="bottombar">
+      <h2 id="email">wmorga20@gmail.com</h2>
+            <i class="fas fa-envelope fa-2x"></i>
+            <a href="#" onclick="linkedIn()">
+               <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <a href="#" onclick="gitHub()">
+               <i class="fab fa-github fa-2x" id="gitHub"></i>
+            </a>
     </div>
-    
-    <!--
-    <script>
-      $( document ).ready(function(){
-        $("#img1").click(function(){
-          $("#img2").hide();
-        });
-      });
-    </script> -->
-   
+  </section>
 
+  <!--About Me Section-->   
+  <div class="backgroundScroll"> 
+      <div class="container3">
+          <h1 id="Title">Hello</h1>
+          <i class="fas fa-angle-double-down fa-2x" id="firstarrow"></i>
+          <i class="fas fa-angle-double-down fa-2x" id="seconarrow"></i>
+          <p>I am Wesley Morgan, a Front End Developer in Atlanta! I've always been fascinated with interactive sites. 
+            It is my goal to learn how to craft beautiful interactive sites for the youth. 
+            In march of 2020 I started my journey in learning to code by attending a 7-month bootcamp. 
+            Since finishing in September I have been coding almost everyday and eager to learn new tricks.
+          </p>
+          <p id="skills">proficient languages</p>
+          <p id="JS">Javasript</p>
+          <p id="CSS">CSS</p>
+          <p id="HTML">HTML</p>
+          <p id="JQuery">JQuery</p>
+          <p id="secondparagraph">
+            Below you'll find a project I am working on. 
+            Thanks for visiting my page and feel free to contact me if you are look for a front end-developer! 
+          </p>
+    </div>
+  </div>
+
+  <!--Project Section-->   
+    <div class="backgroundScroll3"> 
+        <div class="container5">
+              <h1 id="Title2">Hair Salon Website</h1>
+                  <div id="Codebox"><p>Code</p></div>
+                  <div id="gitHub3">
+                      <a href="#" onclick="salonCode()">
+                      <i class="fab fa-github fa-2x"></i>
+                      </a>
+                  </div>
+                  <div id="check1"><i class="far fa-check-square"></i></div>
+                  <div id="check2"><i class="far fa-check-square"></i></div>
+              <h1 id="subtitle1">Project 2</h1>
+              <h2 id="subtitle2">Description</h2>
+              <p id="thirdparagraph">
+                My sister owns a hair salon business here in the city. 
+                When she first began she had a website designed for her using wix. 
+                She is in need of a website redo!
+              </p>
+              <h2 id="subtitle3">Problems</h2>
+                  <p id="notresponsive">not responsive</p>
+                  <p id="crowded">not branded</p>
+                  <p id="cutoffimages">cut off images</p>
+                  <p id="storefront">no working store</p>
+              <h2 id="subtitle4">Fixed</h2>                 
+                  <p id="notcustomize">repeated buttons</p>
+                  <p id="instructions_1">*hover to preview, click to view</p>
+              <div id="dottedbox">
+                <div clas="w3-col" id="leahSalon"></div>
+                <div clas="w3-col" id="oldSalon"></div>
+              </div>
+        </div>
+    </div>
+  
+     <!--Interactive Svgs-->   
+    <section class="w3-row">
+      <div class="container w3-col">
+        <svg id="Old_1" data-name="Project 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.25 62.34"><a href="#" onclick="project1()"><rect x="2" y="2" width="196.25" height="58.34" fill="#fff" stroke="#231f20" stroke-miterlimit="10" stroke-width="4"/><path d="M78.55,30.92a11.58,11.58,0,0,1,.83-4.46,9.83,9.83,0,0,1,2.3-3.41,10.15,10.15,0,0,1,3.51-2.16,13.52,13.52,0,0,1,8.88,0,10.15,10.15,0,0,1,3.51,2.16,9.83,9.83,0,0,1,2.3,3.41,11.58,11.58,0,0,1,.83,4.46,11.6,11.6,0,0,1-.83,4.47,9.92,9.92,0,0,1-2.3,3.41A10.15,10.15,0,0,1,94.07,41a13.52,13.52,0,0,1-8.88,0,10.15,10.15,0,0,1-3.51-2.16,9.92,9.92,0,0,1-2.3-3.41A11.6,11.6,0,0,1,78.55,30.92Zm4.7,0a7.54,7.54,0,0,0,.45,2.66A6.13,6.13,0,0,0,85,35.67,5.83,5.83,0,0,0,87,37a7.11,7.11,0,0,0,5.24,0,5.83,5.83,0,0,0,2-1.37,6.13,6.13,0,0,0,1.29-2.09,8,8,0,0,0,0-5.29,6,6,0,0,0-1.29-2.11,5.7,5.7,0,0,0-2-1.37,7.11,7.11,0,0,0-5.24,0,5.7,5.7,0,0,0-2,1.37,6,6,0,0,0-1.29,2.11A7.53,7.53,0,0,0,83.25,30.92Z"/><path d="M103.29,19.27h4.35V41.19h-4.35Z"/><path d="M125.56,41.19h-4V39.33h-.06a4.27,4.27,0,0,1-.68.77,5,5,0,0,1-1,.71,5.31,5.31,0,0,1-1.24.52,4.82,4.82,0,0,1-1.41.21,7.22,7.22,0,0,1-2.84-.54,6.36,6.36,0,0,1-2.19-1.51,6.63,6.63,0,0,1-1.41-2.3,8.38,8.38,0,0,1-.49-2.93,8.87,8.87,0,0,1,.45-2.83A7.82,7.82,0,0,1,112,29a6.39,6.39,0,0,1,2-1.67,5.78,5.78,0,0,1,2.7-.62,7.46,7.46,0,0,1,2.53.42,4,4,0,0,1,1.93,1.43h.06V19.27h4.35Zm-4-7a3.69,3.69,0,0,0-.91-2.58,3.86,3.86,0,0,0-5.14,0,3.65,3.65,0,0,0-.91,2.58,3.61,3.61,0,0,0,.91,2.58,3.83,3.83,0,0,0,5.14,0A3.66,3.66,0,0,0,121.56,34.14Z"/></svg>     
+         </a></div>
+      <div class="container2 w3-col">
+          <svg id="New_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.25 62.34"><a href="#" onclick="project2()"><rect x="2" y="2" width="196.25" height="58.34" fill="#fff" stroke="#231f20" stroke-miterlimit="10" stroke-width="4"/><path d="M71.65,20.66H77.8l8.73,14.27h.06V20.66h4.52V41.19H85.2l-9-14.62h-.06V41.19H71.65Z"/><path d="M108.08,38.75a7,7,0,0,1-2.64,2.06,7.82,7.82,0,0,1-3.31.73A9.1,9.1,0,0,1,99.07,41a7.47,7.47,0,0,1-2.49-1.5,6.9,6.9,0,0,1-1.67-2.33,7.91,7.91,0,0,1,0-6.09,7,7,0,0,1,1.67-2.34,7.61,7.61,0,0,1,2.49-1.49,8.86,8.86,0,0,1,3.06-.52,6.9,6.9,0,0,1,2.74.52A5.75,5.75,0,0,1,107,28.76a6.85,6.85,0,0,1,1.32,2.34,9.37,9.37,0,0,1,.47,3v1.37H98.65a3.45,3.45,0,0,0,1.13,2,3.18,3.18,0,0,0,2.15.74,3.26,3.26,0,0,0,1.81-.48A4.71,4.71,0,0,0,105,36.52Zm-3.69-6.2a2.54,2.54,0,0,0-.72-1.89,2.58,2.58,0,0,0-1.94-.78,3.36,3.36,0,0,0-1.28.23,3.29,3.29,0,0,0-.94.6,2.52,2.52,0,0,0-.61.84,2.68,2.68,0,0,0-.25,1Z"/><path d="M109.7,27.1h4.64l2.87,8.84h.06l2.41-8.84h4.75L127,35.94h.06l2.64-8.84h4.41l-5,14.09h-4.29l-2.93-9.37h-.06l-2.61,9.37h-4.38Z"/></svg>
+          </a></div>
+    </section>
+
+
+    <!--Project Section 2-->   
+    <div class="backgroundScroll2"> 
+      <div class="container4">
+            <h1 id="Title3">The Story Room</h1>
+                <div id="Codebox1"><p>Code</p></div>
+                <div id="gitHub4">
+                    <a href="#" onclick="storyroomCode()">
+                    <i class="fab fa-github fa-2x"></i>
+                    </a>
+                </div>
+                <div id="check3"><i class="far fa-check-square"></i></div>
+                <div id="check4"><i class="far fa-check-square"></i></div>
+            <h1 id="subtitle33">Project 1</h1>
+            <h2 id="subtitle44">Description</h2>
+            <p id="fourthparagraph">
+             A rough prototype of an interactive choose your own adventure story for kids.
+             This was created for a case study to see how interactive stories helped engagement in virtual classrooms.
+            </p>
+            <h2 id="subtitle6">Obstacles</h2>
+                <p id="notresponsive1">Easy to use</p>
+                <p id="crowded1">interactive choice section</p>
+            <h2 id="subtitle7">Fixed</h2>                 
+                <p id="instructions_11">*hover to preview, click to view</p>
+            <div id="dottedbox1">
+              <div clas="w3-col" id="storyRoom"></div>
+            </div>
+      </div>
+   </div>
+
+        <!--Interactive Svgs 2-->   
+        <section class="w3-row">
+          <div class="container22 w3-col">
+              <svg id="storyroomButton" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.25 62.34">
+                <a href="#" onclick="project22()"><rect x="2" y="2" width="196.25" height="58.34" fill="#fff" stroke="#231f20" stroke-miterlimit="10" stroke-width="4"/><path d="M71.65,20.66H77.8l8.73,14.27h.06V20.66h4.52V41.19H85.2l-9-14.62h-.06V41.19H71.65Z"/><path d="M108.08,38.75a7,7,0,0,1-2.64,2.06,7.82,7.82,0,0,1-3.31.73A9.1,9.1,0,0,1,99.07,41a7.47,7.47,0,0,1-2.49-1.5,6.9,6.9,0,0,1-1.67-2.33,7.91,7.91,0,0,1,0-6.09,7,7,0,0,1,1.67-2.34,7.61,7.61,0,0,1,2.49-1.49,8.86,8.86,0,0,1,3.06-.52,6.9,6.9,0,0,1,2.74.52A5.75,5.75,0,0,1,107,28.76a6.85,6.85,0,0,1,1.32,2.34,9.37,9.37,0,0,1,.47,3v1.37H98.65a3.45,3.45,0,0,0,1.13,2,3.18,3.18,0,0,0,2.15.74,3.26,3.26,0,0,0,1.81-.48A4.71,4.71,0,0,0,105,36.52Zm-3.69-6.2a2.54,2.54,0,0,0-.72-1.89,2.58,2.58,0,0,0-1.94-.78,3.36,3.36,0,0,0-1.28.23,3.29,3.29,0,0,0-.94.6,2.52,2.52,0,0,0-.61.84,2.68,2.68,0,0,0-.25,1Z"/><path d="M109.7,27.1h4.64l2.87,8.84h.06l2.41-8.84h4.75L127,35.94h.06l2.64-8.84h4.41l-5,14.09h-4.29l-2.93-9.37h-.06l-2.61,9.37h-4.38Z"/>
+                </svg>      
+              </a>
+          </div>
+          
+          
+        </section>
+   
+    
+    <!--link to javascript-->
     <script src="../js/wesleycodes.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
